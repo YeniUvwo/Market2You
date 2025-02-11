@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market 2 Doorstep</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+        <h1>Market 2 Doorstep</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Fresh Market Produce Delivered to Your Doorstep</h2>
+        <p>Order fresh food items directly from your nearest open market.</p>
+        <a href="#order" class="btn">Start Shopping</a>
+    </section>
+    
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Select your nearest market</li>
+            <li>Specify the items and quantity you need</li>
+            <li>Our representative will confirm pricing & availability</li>
+            <li>Make payment online</li>
+            <li>Receive your order at your estate gate</li>
+        </ol>
+    </section>
+    
+    <section id="order">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="market">Select Market:</label>
+            <select id="market" name="market" required>
+                <option value="Olowora Market">Olowora Market</option>
+                <option value="Isheri Market">Isheri Market</option>
+                <option value="Ogombo Market">Ogombo Market</option>
+                <option value="Abraham Adesanya Market">Abraham Adesanya Market</option>
+            </select>
+            
+            <label for="items">Enter Items & Quantity:</label>
+            <textarea id="items" name="items" placeholder="E.g., 2kg tomatoes, 1 bunch of spinach" required></textarea>
+            
+            <label for="delivery-time">Select Delivery Time:</label>
+            <select id="delivery-time" name="delivery-time" required>
+                <option value="1hr">In 1 Hour</option>
+                <option value="next-day">Next Day</option>
+            </select>
+            
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            
+            <button type="submit" class="btn">Submit Order</button>
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us via WhatsApp or email.</p>
+    </section>
+    
+    <footer>
+      <p style="color: red; font-weight: bold; text-align: center; margin: 10px;">⚠️ Disclaimer: All payments should be made only to the company's official account. We will not be liable for any payments made elsewhere. ⚠️</p>
+        <p>&copy; 2025 Market to Doorstep. All rights reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <p>You are being redirected to WhatsApp to complete your order.</p>
+          <p><strong>Order Number:</strong> <span id="orderNumber"></span></p>
+          <button id="confirmRedirect">OK</button>
+        </div>
+    </div>  
+
+    <script src="script.js"></script>
+  </body>
+</html>
