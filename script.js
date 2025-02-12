@@ -24,3 +24,28 @@ document.getElementById("orderForm").addEventListener("submit", function(event) 
         // window.location.href = window.open(whatsappURL, '_blank');
     });
 });
+
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    const menu = document.querySelector(".menu-container");
+    menu.classList.toggle("active");
+    menu.style.display = menu.classList.contains("active") ? "flex" : "none";
+});
+
+document.querySelector(".menu-close").addEventListener("click", function() {
+    const menu = document.querySelector(".menu-container");
+    menu.classList.remove("active");
+    menu.style.display = "none";
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function() {
+        document.querySelector(".menu-container").classList.remove("active");
+        document.querySelector(".menu-container").style.display = "none";
+        document.getElementById("modal").style.display = "none";
+    });
+    link.addEventListener("click", function() {
+        const menu = document.querySelector(".menu-container");
+        menu.classList.remove("active");
+        menu.style.display = "none";
+    });
+});

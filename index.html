@@ -10,15 +10,19 @@
   </head>
   <body>
     <header>
-        <h1>Market 2 Doorstep</h1>
-        <nav>
+      <h1>Market 2 Doorstep</h1>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav>
+        <div class="menu-container">
+          <span class="menu-close">&times;</span> 
           <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#order">Order Now</a></li>
-              <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="#order" class="nav-link">Order Now</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
     </header>
     
     <section id="home">
@@ -75,7 +79,7 @@
     
     <footer>
       <p style="color: red; font-weight: bold; text-align: center; margin: 10px;">⚠️ Disclaimer: All payments should be made only to the company's official account. We will not be liable for any payments made elsewhere. ⚠️</p>
-        <p>&copy; 2025 Market to Doorstep. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 Market to Doorstep. All rights reserved.</p>
     </footer>
 
     <div id="modal" class="modal">
